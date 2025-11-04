@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  line-height: 1.6;
+  background: #EBEAFF;
+  padding: 1rem;
+  color: #2A2A68;
+}
+
+.purple-text {
+  font-family: "Playfair Display", serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 70px;
+  letter-spacing: 0px;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  transition: letter-spacing 0.3s ease;
+}
+
+.title:hover {
+  font-size: 72px;
+  letter-spacing: 4px;
+  color: #2A2A68;
+  transition: text-shadow 0.3s ease;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  transition: letter-spacing 0.3s ease;
+}
+
+.glass-nav {
+  position: relative;
+  margin: 10px auto 0 auto;
+  width: 99%;
+  max-width: 1000px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+
+  background: linear-gradient(135deg,
+      rgba(140, 60, 200, 0.45),
+      rgba(90, 30, 150, 0.45));
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.glass-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.glass-nav ul li a {
+  text-decoration: none;
+  color: #f5eaff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.glass-nav ul li a:hover {
+  color: #e1c8ff;
+  text-shadow: 0 0 10px rgba(225, 200, 255, 0.7);
+}
+
+.abt {
+  width: 50%;
+  font-size: 15px;
+}
+
+.submit {
+  width: 150px;
+  background-color: #5A1E96;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.7s ease;
+  height: 39px;
+}
+
+.submit2 {
+  width: 150px;
+  background-color: #5A1E96;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.7s ease;
+  height: 39px;
+}
+
+.submit:hover {
+  width: 150px;
+  background-color: #cda0fb;
+  color: #5A1E96;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.9s ease;
+  box-shadow: 0 0 10px rgba(123, 0, 246, 0.7);
+}
+.submit2:hover {
+  width: 150px;
+  background-color: #cda0fb;
+  color: #5A1E96;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.9s ease;
+  box-shadow: 0 0 10px rgba(123, 0, 246, 0.7);
+}
+
+.load {
+  z-index: 2200;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: black;
+  width: 98%;
+  max-width: 1100px;
+  padding: 2rem;
+  height: 1600px;
+
+  background: rgba(255, 255, 255, 0.1);
+  /* transparent glass */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+  color: #000000;
+}
+
+.load p {
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.loader {
+  width: 80px;
+  height: 20px;
+  color: #514b82;
+  background:
+    radial-gradient(farthest-side, currentColor 98%, #0000) left /20px 20px,
+    radial-gradient(farthest-side, currentColor 98%, #0000) right /20px 20px,
+    radial-gradient(farthest-side, #000 98%, #0000) center/5px 5px,
+    linear-gradient(currentColor 0 0) center/100% 2px;
+  background-repeat: no-repeat;
+  animation: l9 1s cubic-bezier(.5, -150, .5, 150) infinite;
+  display: block;
+  pointer-events: auto;
+}
+
+@keyframes l9 {
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+.events {
+  height: 350px;
+  width: 90%;
+  margin-top: 20px;
+  text-align: left;
+  font-family: 'Google Sans Text', sans-serif;
+  font-size: 18px;
+  color: #2A2A68;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(45, 45, 45, 0.25);
+  border-radius: 15px;
+  padding: 20px;
+  overflow-y: auto;
+  /* enable vertical scroll */
+  overflow-x: hidden;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tempora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="icon" type="image/gif" href="images/ic.png">
+</head>
+
+<body onload="loadf()">
+  <nav class="glass-nav">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a onclick="down()">Explore</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/List_of_dates_predicted_for_apocalyptic_events">Events</a></li>
+      <li><a onclick="about()">About</a></li>
+    </ul>
+  </nav>
+  <br>
+  <center>
+    <div class="load" id="load">
+      <br><br><br> <br><br><br>
+      <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br>
+      <div class="loader-overlay">
+        <div class="loader"></div>
+      </div>
+
+    </div>
+    <h1 class="title">Tempora</h1>
+    <p>Time remixed – history and beyond</p><br>
+    <p class="abt">Tempora is a unique calendar remix that blends the past & present into one seamless
+      experience. Instead of showing only your daily events, Tempora uncovers historic milestones, cosmic wonders, and
+      visionary future forecasts tied to each date. From NASA space launches to pivotal world events, Tempora transforms
+      time into a story and making every day feel meaningful, inspiring, and connected to something greater.</p>
+    <br><br>
+    <h3>Pick a Day to Travel Through Time</h3>
+    <br>
+    <div id="calendar"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      let fp;
+
+      fp = flatpickr("#calendar", {
+        inline: true,
+        dateFormat: "d/m/Y"
+      });
+    </script><br>
+    <button id="submitBtn" class="submit2">Historical Events</button>
+    <button id="submitBtn2" class="submit">Nasa</button><br><br>
+    <button id="submitBtn3" class="submit">Holiday?</button>
+    <br><br>
+    <h3 style="color:rgb(43, 44, 44)">Events</h3>
+
+    <div id="events" class="events"></div>
+    <br><br>
+
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Google Sans Text', sans-serif;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+    </style>
+
+  </center>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="js/script.js">
+  </script>
+</body>
+
+</html>
